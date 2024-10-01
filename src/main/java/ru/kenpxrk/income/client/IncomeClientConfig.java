@@ -16,7 +16,6 @@ public class IncomeClientConfig {
         return WebClient.create();
     }
 
-
     @Bean
     @ConditionalOnMissingBean
     public IncomeClient incomeClient(WebClient webClient) {

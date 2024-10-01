@@ -6,9 +6,11 @@ import org.springframework.web.reactive.function.client.WebClient;
 import java.util.List;
 
 public class IncomeClient {
-    private final WebClient webClient;
+
     @Value("${income-client.api}")
     private String incomeApi;
+
+    private final WebClient webClient;
 
     IncomeClient(WebClient webClient) {
         this.webClient = webClient;
