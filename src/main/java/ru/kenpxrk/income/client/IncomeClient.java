@@ -16,6 +16,11 @@ public class IncomeClient {
 
 
     public List<IncomeDTO> getUserIncomes() {
-        return webClient.get().uri(incomeApi).retrieve().bodyToFlux(IncomeDTO.class).collectList().block();
+        return webClient.get()
+                .uri(incomeApi)
+                .retrieve()
+                .bodyToFlux(IncomeDTO.class)
+                .collectList()
+                .block();
     }
 }
